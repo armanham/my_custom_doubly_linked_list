@@ -177,7 +177,9 @@ public class MyCustomDoublyLinkedList implements MyCustomList {
 
     @Override
     public Object pop() {
-        return removeFirst();
+        Node f = first;
+        removeFirst();
+        return f.value;
     }
 
     @Override
