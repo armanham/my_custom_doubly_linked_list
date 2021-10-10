@@ -17,9 +17,9 @@ public interface MyCustomList<T> {
 
     void addLast(T obj);
 
-    T removeFirst();
+    void removeFirst();
 
-    T removeLast();
+    void removeLast();
 
     void push(T obj);
 
