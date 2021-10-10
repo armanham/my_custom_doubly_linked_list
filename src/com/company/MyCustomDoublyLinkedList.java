@@ -137,36 +137,32 @@ public class MyCustomDoublyLinkedList implements MyCustomList {
     }
 
     @Override
-    public Object removeFirst() {
+    public void removeFirst() {
         if (size() <= 0) {
             throw new IllegalArgumentException("List is empty");
         } else if (size() == 1) {
             first = null;
             last = null;
             size--;
-            return true;
         } else {
             first.next.previous = null;
             first = first.next;
             size--;
-            return true;
         }
     }
 
     @Override
-    public Object removeLast() {
+    public void removeLast() {
         if (size() <= 0) {
             throw new IllegalArgumentException("List is empty");
         } else if (size() == 1) {
             first = null;
             last = null;
             size--;
-            return true;
         } else {
             last.previous.next = null;
             last = last.previous;
-            size--;
-            return true;
+            size--;          
         }
     }
 
